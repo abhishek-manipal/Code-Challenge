@@ -1,1 +1,3 @@
-This is sample readme file for the Open weather map api
+Prerequisites
+ - Setup maven on the OSX 
+ - Setup cucumber (reporting and Given when and then)
