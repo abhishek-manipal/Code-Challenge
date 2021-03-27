@@ -1,0 +1,1 @@
+This is sample readme file for the Open weather map api
