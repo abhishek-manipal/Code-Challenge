@@ -1,5 +1,5 @@
 
-package com.example;
+package com.ramrewa.app;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
