@@ -2,8 +2,10 @@
 package com.ramrewa.app;
 
 import java.util.List;
-import com.ramrewa.model.DataWeather;
+import com.ramrewa.model.*;
+import lombok.Data;
 
+@Data
 public class Response {
   private List <DataWeather> data = null;
   private String cityName;

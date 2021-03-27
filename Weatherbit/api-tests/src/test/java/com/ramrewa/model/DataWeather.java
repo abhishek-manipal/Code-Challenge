@@ -1,6 +1,7 @@
-
 package com.ramrewa.app;
 
+import lombok.Data;
+@Data
 public class DataWeather {
   private String validDate;
   private Integer ts;
