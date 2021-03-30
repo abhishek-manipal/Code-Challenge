@@ -1,4 +1,4 @@
-package com.ramrewa.app;
+package com.ramrewa.model;
 import lombok.Data;
 
 @Data

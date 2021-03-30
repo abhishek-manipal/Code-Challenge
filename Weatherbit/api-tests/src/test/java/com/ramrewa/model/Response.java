@@ -1,5 +1,5 @@
 
-package com.ramrewa.app;
+package com.ramrewa.model;
 
 import java.util.List;
 import com.ramrewa.model.*;
