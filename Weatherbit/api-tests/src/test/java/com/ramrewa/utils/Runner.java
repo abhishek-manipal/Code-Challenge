@@ -12,8 +12,8 @@ import org.junit.Test;
 @CucumberOptions(
     plugin = {"pretty", "json:target/cucumber-json/cucumber.json",
         "junit:target/cucumber-reports/Cucumber.xml", "html:target/cucumber-reports"},
-    glue = {"com.ramrewa.weather.steps"},
-    features = {"src/test/resources/Weather.feature"}
+    glue = {"com.ramrewa.resources.weather.stepdefinition"},
+    features = {"src/test/java/resources/features/"}
 )
 public class Runner {
 
