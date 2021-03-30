@@ -7,7 +7,7 @@ import lombok.Data;
 
 @Data
 public class Response {
-  private List <DataWeather> data = null;
+  private List <DataWeather> data;
   private String cityName;
   private String lon;
   private String timezone;

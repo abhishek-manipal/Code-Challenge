@@ -9,3 +9,7 @@ Getting Started
 Prerequisites
  - Setup maven on the OSX 
  - Setup cucumber (reporting and Given when and then)
+ 
+Run 
+ - To run from Terminal   
+ `mvn -Dtest=Runner test`
