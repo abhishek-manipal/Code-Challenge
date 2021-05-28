@@ -1,7 +1,5 @@
 package com.ramrewa.model;
-import lombok.Data;
 
-@Data
 public class Weather {
   private String icon;
   private String code;
