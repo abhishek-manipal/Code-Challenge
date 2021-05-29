@@ -1,7 +1,8 @@
 import math
+import sys
 
 def encode_function(string):
-    print(len(string))
+    length = len(string)
     reversed_string = string[::-1]
     sum = convert_decimal(reversed_string)
     binary = convert_binary(sum)
@@ -27,26 +28,23 @@ def convert_binary(sum):
 def convert_list(reversed_binary):
     sum = 0
     ctr = 0
-    newlist = []
+    ArrayOfList = []
     for i in range(len(reversed_binary)-1, -1, -1):
         sum = sum + math.pow(2, ctr)*int(reversed_binary[i])
         ctr = ctr+1
         if ctr%8==0:
-            newlist.append(math.trunc(sum))
+            ArrayOfList.append(math.trunc(sum))
             sum = 0
             ctr = ctr-8
         elif i==0:
-            newlist.append(math.trunc(sum))
-    print(newlist)
-    return newlist
-encode_function("31646541")
-"""
-encode_function("1163114742311135167021343424004141432061264036716605455"+
-                 "35070012425145143366515462107042710455720106717127670062"+
-                 "71704657770433346073017047360217626325467150763006577133"+
-                 "54152655466766041402716542312670131505761476052650004524"+
-                 "21616177052165224543311447543654741617367042213645643631"+
-                 "33346575330621635642541636644326535501666004333326756424"+
-                 "47003252221104064117622317044717471253")
+            ArrayOfList.append(math.trunc(sum))
+    print(ArrayOfList)
+    return ArrayOfList
 
-"""
+str1 = "31646541"
+str2 = "1163114742311135167021343424004141432061264036716605455350700124251451433665154621070427104557201067171276700627170465777043334607301704736021762632546715076300657713354152655466766041402716542312670131505761476052650004524216161770521652245433114475436547416173670422136456436313334657533062163564254163664432653550166600433332675642447003252221104064117622317044717471253"
+encode_function(str2)
+#encode_function(str2)
+
+
+
