@@ -25,7 +25,7 @@ public class OctalToBinary {
     String binary = "";
     ArrayList<String> ArrayOfList = new ArrayList<String>();
 
-    while (octal!=0){
+    while (octal!=0) {
       rem = octal%10;
       if (rem>7) {
         chk = 1;
@@ -34,34 +34,35 @@ public class OctalToBinary {
       rev = rem + (rev*10);
       octal = octal/10;
     }
-    if (chk == 0){
+    if (chk == 0) {
       octal = rev;
       while (octal!=0) {
-        rem = octal%10;
-        if (rem==0) {
+        rem = octal % 10;
+        if (rem == 0) {
           binary = binary + "000";
-        } else if (rem==1) {
+        } else if (rem == 1) {
           binary = binary + "001";
-        } else if (rem==2) {
+        } else if (rem == 2) {
           binary = binary + "010";
-        } else if (rem==3) {
+        } else if (rem == 3) {
           binary = binary + "011";
-        } else if (rem==4) {
+        } else if (rem == 4) {
           binary = binary + "100";
-        } else if (rem==5) {
+        } else if (rem == 5) {
           binary = binary + "101";
-        } else if (rem==6) {
+        } else if (rem == 6) {
           binary = binary + "110";
-        } else if (rem==7) {
+        } else if (rem == 7) {
           binary = binary + "111";
         }
         octal = octal/10;
-        ArrayOfList = ConvertToList(binary);
-        System.out.println("List is "+ArrayOfList);
-        //ArrayOfList.reverse()
       }
+      System.out.println ("Binary is "+binary);
+      ArrayOfList = ConvertToList(binary);
+      Collections.reverse(ArrayOfList);
+      System.out.println ("List is "+ArrayOfList);
     } else {
-      System.out.println("Invalid value ");
+      System.out.println("Invalid value");
     }
   }
 
@@ -72,19 +73,17 @@ public class OctalToBinary {
     Integer length = binary.length()-1;
     ArrayList<String> list = new ArrayList<String>();
 
-    for (i=length; i>-i; i = i-1){
-      sum = sum + (int)Math.pow(2, ctr)*Character.getNumericValue(binary.charAt(i));
+    for (i=length; i>-1; i = i-1) {
+      sum = sum + (int) Math.pow(2, ctr) * Character.getNumericValue(binary.charAt(i));
+      ctr = ctr + 1;
+      if (ctr % 8 == 0) {
+        list.add(sum.toString());
+        sum = 0;
+        ctr = ctr - 8;
+      } else if (i == 0) {
+        list.add(sum.toString());
+      }
     }
-    ctr = ctr+1;
-    if (ctr%8==0){
-      sum = 0;
-      ctr = ctr-8;
-      list.add(sum.toString());
-    } else if (i==0) {
-      list.add(sum.toString());
-    }
-    sum = 0;
-    ctr = ctr-8;
     return list;
   }
 }
