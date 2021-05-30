@@ -17,7 +17,6 @@ public class OctalToBinary {
   }
 
   public static void ConvertOctalToBinary(String str) {
-    System.out.println("Original string "+str);
     Integer octal = Integer.parseInt(str);
     System.out.println(octal);
     Integer rev = 0;
@@ -57,7 +56,8 @@ public class OctalToBinary {
           binary = binary + "111";
         }
         octal = octal/10;
-        //ArrayOfList = ConvertToList(binary);
+        ArrayOfList = ConvertToList(binary);
+        System.out.println("List is "+ArrayOfList);
         //ArrayOfList.reverse()
       }
     } else {
@@ -65,7 +65,7 @@ public class OctalToBinary {
     }
   }
 
-  public ArrayList<String> ConvertToList(String binary) {
+  public static ArrayList<String> ConvertToList(String binary) {
     Integer sum = 0;
     Integer ctr = 0;
     Integer i;
@@ -73,21 +73,18 @@ public class OctalToBinary {
     ArrayList<String> list = new ArrayList<String>();
 
     for (i=length; i>-i; i = i-1){
-      char x = binary.charAt(i);
-      System.out.print(x);
-      //sum = sum + Math.pow(2, ctr)*Integer.parseInt(x);
+      sum = sum + (int)Math.pow(2, ctr)*Character.getNumericValue(binary.charAt(i));
     }
     ctr = ctr+1;
     if (ctr%8==0){
       sum = 0;
       ctr = ctr-8;
       list.add(sum.toString());
-    } else if (i==0){
+    } else if (i==0) {
       list.add(sum.toString());
     }
     sum = 0;
     ctr = ctr-8;
     return list;
-
   }
 }
