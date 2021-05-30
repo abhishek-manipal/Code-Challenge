@@ -13,7 +13,7 @@ public class OctalToBinary {
         "631333465753306216356425416366443265355016660043333267564244700325222110" +
         "4064117622317044717471253";
     ConvertOctalToBinary(str1);
-    ConvertOctalToBinary(str2);
+    //ConvertOctalToBinary(str2);
   }
 
   public static void ConvertOctalToBinary(String str) {
