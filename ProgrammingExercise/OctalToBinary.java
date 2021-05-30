@@ -21,7 +21,7 @@ public class OctalToBinary {
     Integer chk = 0;
     Integer rem = 0;
     String binary = "";
-    List<String> ArrayOfList = new List<String>();
+    //List<String> ArrayOfList = new List<String>();
 
     while (octal!=0){
       rem = octal%10;
@@ -54,7 +54,7 @@ public class OctalToBinary {
           binary = binary + "111";
         }
         octal = octal/10;
-        ArrayOfList = ConvertToList(binary);
+        //ArrayOfList = ConvertToList(binary);
         //ArrayOfList.reverse()
       }
     } else {
