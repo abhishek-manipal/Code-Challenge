@@ -88,5 +88,6 @@ public class OctalToBinary {
     sum = 0;
     ctr = ctr-8;
     return list;
+
   }
 }
