@@ -5,12 +5,15 @@ import java.lang.Math;
 
 public class OctalToBinary {
   public static void main(String []args) {
-    // Declare Test one string
     String str1 = "31646541";
-    // Declare Test two string
-    String str2 = "1163114742311135167021343424004141432061264036716605455350700124251451433665154621070427104557201067171276700627170465777043334607301704736021762632546715076300657713354152655466766041402716542312670131505761476052650004524216161770521652245433114475436547416173670422136456436313334657533062163564254163664432653550166600433332675642447003252221104064117622317044717471253";
+    String str2 = "1163114742311135167021343424004141432061264036716605455350700" +
+        "12425145143366515462107042710455720106717127670062717046577704333460730" +
+        "170473602176263254671507630065771335415265546676604140271654231267013150" +
+        "576147605265000452421616177052165224543311447543654741617367042213645643" +
+        "631333465753306216356425416366443265355016660043333267564244700325222110" +
+        "4064117622317044717471253";
     ConvertOctalToBinary(str1);
-    ConvertOctalToBinary(str1);
+    //ConvertOctalToBinary(str2);
   }
 
   public static void ConvertOctalToBinary(String str) {
@@ -21,7 +24,7 @@ public class OctalToBinary {
     Integer chk = 0;
     Integer rem = 0;
     String binary = "";
-    //List<String> ArrayOfList = new List<String>();
+    ArrayList<String> ArrayOfList = new ArrayList<String>();
 
     while (octal!=0){
       rem = octal%10;
@@ -62,12 +65,12 @@ public class OctalToBinary {
     }
   }
 
-  public List<String> ConvertToList(String binary) {
+  public ArrayList<String> ConvertToList(String binary) {
     Integer sum = 0;
     Integer ctr = 0;
     Integer i;
     Integer length = binary.length()-1;
-    List<String> list = new ArrayList<String>();
+    ArrayList<String> list = new ArrayList<String>();
 
     for (i=length; i>-i; i = i-1){
       char x = binary.charAt(i);
