@@ -13,11 +13,12 @@ public class OctalToBinary {
         "631333465753306216356425416366443265355016660043333267564244700325222110" +
         "4064117622317044717471253";
     ConvertOctalToBinary(str1);
-    //ConvertOctalToBinary(str2);
+    ConvertOctalToBinary(str2);
   }
 
   public static void ConvertOctalToBinary(String str) {
-    Integer octal = Integer.parseInt(str);
+    double oct = Double.parseDouble(str);
+    Integer octal = (int) Math.floor(oct);
     System.out.println(octal);
     Integer rev = 0;
     Integer chk = 0;
