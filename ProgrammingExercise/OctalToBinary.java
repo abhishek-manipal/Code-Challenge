@@ -10,8 +10,10 @@
 // 33346575330621635642541636644326535501666004333326756424
 // 47003252221104064117622317044717471253"
 
+import java.util.*;
+import java.lang.Math;
 
-public class OctalToBinary{
+public class OctalToBinary {
   public static void main(String []args) {
     // Declare Test one string
     String str1 = "31646541";
@@ -66,10 +68,17 @@ public class OctalToBinary{
     }
   }
 
-  public static void ConvertToList(String str) {
+  public List<String> ConvertToList(String binary) {
     int sum = 0;
     int ctr = 0;
+    int length = binary.length()-1;
+    List<String> list = new ArrayList<String>();
 
+    for (int i=length; i>-i; i = i-1){
+      //sum = sum + Math.pow(2, ctr)*Integer.parseInt(binary[i]);
+    }
+
+    return list;
 
   }
 
