@@ -47,7 +47,7 @@ def assert_warm_temperature(temp):
 def send_request_url():
     # Assume city is sydney and country is au
     url='http://api.openweathermap.org'
-    api_key="48bb89e113f9a204239ebeede53b4f81"
+    api_key="3cf71f0a0888559eb1adcab7ac97b284"
     city = "sydney"
     country_Code = "au"
     url_with_city_country = (
