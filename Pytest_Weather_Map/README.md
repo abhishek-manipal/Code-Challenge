@@ -1,6 +1,6 @@
 Step 1:Create virtual env
 
-python3 -m venv
+python3 -m venv <dir>
 
 Step 2: Install the requirements.txt(Assuming you have pip or pip3 installed)
 

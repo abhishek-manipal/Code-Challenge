@@ -1,6 +1,15 @@
-Feature: To implement the choosey surfers request using BDD framework
+@REGRESSION
+Feature: This is a test feature for Holiday Maker
 
-  Scenario: As a choosey surfer I would like to check the weather
+  Scenario: A happy holidaymaker
+    Given I like to holiday in Sydney
+    And I only like to holiday on Thursdays
+    When I look up the weather forecast
+    Then I receive the weather forecast
+    And the temperature is warmer than 10 degrees
+
+
+
 
 
 

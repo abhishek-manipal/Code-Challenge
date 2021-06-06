@@ -44,6 +44,7 @@ def ConvertToList(binary):
     sum = 0
     ctr = 0
     ArrayOfList = []
+    print(binary)
     for i in range(len(binary)-1, -1, -1):
         sum = sum + math.pow(2, ctr)*int(binary[i])
         ctr = ctr+1
