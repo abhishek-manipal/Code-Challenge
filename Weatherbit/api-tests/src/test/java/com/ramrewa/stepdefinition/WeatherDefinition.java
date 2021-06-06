@@ -1,5 +1,6 @@
 package com.ramrewa.stepdefinition;
 
+import com.ramrewa.helper.WeatherHelper;
 import com.ramrewa.model.Response;
 
 import io.cucumber.java.en.And;
@@ -9,14 +10,13 @@ import io.cucumber.java.en.Then;
 
 import java.util.logging.Logger;
 
-public class WeatherDefinition extends Response {
+public class WeatherDefinition extends WeatherHelper {
 
   private final Logger logger = Logger.getLogger("WeatherDefinition.class");
+  public Response WeatherResponse = new Response();
 
   @Given("I like to holiday in Sydney")
   public void iLikeToSurfInSydney() throws Throwable {
-
-    //private WeatherResponse Response;
     logger.info("I like to holiday in Sydney ");;
   }
 
