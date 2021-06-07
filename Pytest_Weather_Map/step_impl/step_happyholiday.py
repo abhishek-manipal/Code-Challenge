@@ -2,7 +2,7 @@ from getgauge.python import step, before_scenario
 import requests
 
 @before_scenario()
-def set_url_openweather():
+def SetUrlResources():
     #Todo add an precondition for test
 
 @step("I like to holiday in <City>")
@@ -20,14 +20,14 @@ def CheckActualTravelDay(ActualDay, ExpectedDay="Thursday"):
 @step("Return code from get request is <response_code>")
 def CheckResponseCode(response_code):
     # Assume city is sydney and country is au
-    response = send_request_url()
+    response = GetWeatherWithCountry()
     print(response.status_code)
     assert response.status_code == int(response_code), "Non " + response_code + " Error in Request"
 
 @step("Temperature is warmer than <temp> degrees")
 # Assume the minimum temperature 
 def CheckHolidayTemperature(temp):
-    response = send_request_url()
+    response = GetWeatherWithCountry()
     json_obj = response.json()
     # Convert temperature in kelvin to degree centigrate
     temp_min = float(json_obj["main"]["temp_min"] - 273.15)
@@ -44,7 +44,7 @@ def CheckHolidayTemperature(temp):
     print(cmd)
     print("============================================================================================")
 
-def send_request_url():
+def GetWeatherWithCountry():
     # Assume city is sydney and country is au
     url='http://api.openweathermap.org'
     api_key="48bb89e113f9a204239ebeede53b4f81"
