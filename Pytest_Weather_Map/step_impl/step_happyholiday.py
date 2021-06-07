@@ -3,22 +3,22 @@ import requests
 
 @before_scenario()
 def set_url_openweather():
-    print("this function is for initilization")
+    #Todo add an precondition for test
 
 @step("I like to holiday in <City>")
 # Check Actual City and expected city is same
-def assert_travel_city(ActualCity, ExpectedCity="sydney"):
-    assrt_msg = "Actual City for Holiday is {ActualCity} while Expected city:{ExpectedCity}"
-    assert ActualCity == ExpectedCity, assrt_msg
+def CheckTravelCity(ActualCity, ExpectedCity = "sydney"):
+    assert_msg = "Actual City for Holiday is {ActualCity} while Expected city:{ExpectedCity}"
+    assert ActualCity == ExpectedCity, assert_msg
 
 @step("I only like to Holiday on <Day>")
 # Check if the day for holiday is 'Thursday'
-def assert_travel_day(ActualDay, ExpectedDay="Thursday"):
-    assrt_msg = "Actual Day for Travel is {ActualDay} while Expected day:{ExpectedDay}"
-    assert ActualDay == ExpectedDay, assrt_msg
+def CheckActualTravelDay(ActualDay, ExpectedDay="Thursday"):
+    assert_msg = "Actual Day for Travel is {ActualDay} while Expected day:{ExpectedDay}"
+    assert ActualDay == ExpectedDay, assert_msg
 
 @step("Return code from get request is <response_code>")
-def assert_200_reurn_code(response_code):
+def CheckResponseCode(response_code):
     # Assume city is sydney and country is au
     response = send_request_url()
     print(response.status_code)
@@ -26,7 +26,7 @@ def assert_200_reurn_code(response_code):
 
 @step("Temperature is warmer than <temp> degrees")
 # Assume the minimum temperature 
-def assert_warm_temperature(temp):
+def CheckHolidayTemperature(temp):
     response = send_request_url()
     json_obj = response.json()
     # Convert temperature in kelvin to degree centigrate
@@ -35,7 +35,7 @@ def assert_warm_temperature(temp):
     weather_description = json_obj["weather"][0]["description"]
     wind_speed = float(json_obj["wind"]["speed"])
     pressure = int(json_obj["main"]["pressure"])
-    assert temp_min > int(temp), "Exiting since temperature should be more then {temp}  degrees"
+    assert temp_min < int(temp), "Exiting since temperature should be more then {temp}  degrees"
     print("\n")
     print("             Weather Forecast                        ")
     print("===========================================================================================")
