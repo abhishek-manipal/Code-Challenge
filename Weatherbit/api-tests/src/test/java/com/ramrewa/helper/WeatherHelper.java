@@ -10,6 +10,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+//import com.fasterxml.jackson.databind.ObjectMapper;
+
+
+
 
 
 public class WeatherHelper {
@@ -20,8 +24,11 @@ public class WeatherHelper {
   public static final String country_Code =  "au";
   public static final String url_with_city_country  = endPoint+"/data/2.5/weather?q=" + city + "," + country_Code + "&APPID=" + api_key;
 
-
-  //api.openweathermap.org/data/2.5/weather?id=2172797&appid={API key}
+  //ObjectMapper mapper = new ObjectMapper();
+  Map<String, String> mapWebserviceResponse;
+  //mapWebserviceResponse = invocationUtil.invokePostWithHeaders(endPoint, query, headerListRewards);
+  String responseStr = mapWebserviceResponse.get("response");
+  //return mapper.readValue(responseStr, AppleWalletResponse.class);
 
 }
 
