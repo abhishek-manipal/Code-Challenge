@@ -2,5 +2,7 @@
     "video": true,
     "defaultCommandTimeout": 5000,
     "pageLoadTimeout": 10000,
-    "ignoreTestFiles": ["*.js", "*.md"]
+    "ignoreTestFiles": ["*.js", "*.md"],
+    "screenshotsFolder": "src/cypress/screenshots",
+    "videosFolder": "src/cypress/videos"
 }

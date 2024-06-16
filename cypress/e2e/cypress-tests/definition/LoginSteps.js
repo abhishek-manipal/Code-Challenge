@@ -1,4 +1,4 @@
-import { And, Then, When } from '@badeball/cypress-cucumber-preprocessor';
+import { And, Then, When } from '@badeball/cypress-cucumber-preprocessor'
 
 When('I login using registered credentials', () => {
     cy.get("#username").type('abhishek.mishra.sydney@gmail.com')
